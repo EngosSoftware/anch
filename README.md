@@ -5,7 +5,7 @@
 ![coverage][cov-badge]
 ![mbh][mbh-badge]
 
-[crates-badge]: https://img.shields.io/crates/v/anch.svg?refresh=1
+[crates-badge]: https://img.shields.io/crates/v/anch.svg
 [crates-url]: https://crates.io/crates/anch
 [cov-badge]: https://img.shields.io/badge/cov-100%25-21b577.svg
 [build-badge]: https://github.com/EngosSoftware/anch/actions/workflows/build.yml/badge.svg
