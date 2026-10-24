@@ -13,9 +13,10 @@
 
 # Annotated characters
                       
-This crate provides the annotated iterator that yields annotated characters,
-meaning each item is either a character or a line ending, together with the line and column
-where it was encountered in the input. Lines and columns are numbered starting from 1.
+This crate provides an iterator that yields annotated characters, meaning each item
+is either a character or a line ending, together with the line and column where it was
+encountered in the input. Lines and columns are numbered starting from 1.
+
 All valid line endings are recognized and reported as a single item, like this:
 
 - `\n` → `LineEnding::Lf`
