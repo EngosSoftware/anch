@@ -1,0 +1,62 @@
+.tasks
+
+  .all
+    .desc Runs all tasks
+    .task clean
+    .task fmt
+    .task clippy
+    .task build
+    .task test
+    .task cov
+
+  .build
+    .desc Builds in debug mode
+    .cmd cargo +stable build
+
+  .clean
+    .desc Cleans all targets
+    .cmd cargo clean
+
+  .clippy
+    .desc Runs clippy for all targets
+    .cmd cargo +stable clippy --all-targets -- -D warnings -W clippy::pedantic
+
+  .cov
+    .desc Generates code coverage report in text format
+    .cmd cargo +stable llvm-cov clean
+    .cmd cargo +stable llvm-cov --no-cfg-coverage
+
+  .cov-html
+    .desc Generates code coverage report in HTML format
+    .cmd cargo +stable llvm-cov clean
+    .cmd cargo +stable llvm-cov --no-cfg-coverage --html
+
+  .cov-html-open
+    .desc Generates code coverage report in HTML format and opens in browser
+    .cmd cargo +stable llvm-cov clean
+    .cmd cargo +stable llvm-cov --no-cfg-coverage --html --open
+
+  .cov-badge
+    .desc Generates the detailed code coverage badge
+    .cmd cargo +stable llvm-cov clean
+    .cmd cargo +stable llvm-cov --no-cfg-coverage --json --summary-only | coverio -l cov -c --tag cov-badge
+
+  .doc
+    .desc Generates documentation
+    .cmd cargo +stable doc
+
+  .doc-open
+    .desc Generates documentation and opens in browser
+    .cmd cargo +stable doc --open
+
+  .fmt
+    .desc Runs code formatter
+    .cmd cargo +stable fmt
+
+  .test
+    .desc Runs tests in debug mode
+    .cmd cargo +stable test
+
+  .testn
+    .desc Runs tests in debug mode
+    .cmd cargo +stable nextest run

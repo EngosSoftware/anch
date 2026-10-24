@@ -1,0 +1,21 @@
+[package]
+name = "anch"
+version = "0.1.0"
+authors = ["Dariusz Depta <depta@engos.de>"]
+description = "Anotated characters"
+documentation = "https://docs.rs/anch"
+repository = "https://github.com/EngosSoftware/anch.git"
+keywords = ["annotated", "characters", "iterator"]
+categories = ["text-processing"]
+license = "MIT OR Apache-2.0"
+rust-version = "1.85.0"
+edition = "2024"
+include = [
+    "src/**",
+    "tests/**",
+    "Cargo.lock",
+    "Cargo.toml",
+    "LICENSE*",
+    "NOTICE",
+    "README.md"
+]
